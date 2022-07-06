@@ -1,0 +1,47 @@
+.timeline {
+    width:100%;
+    
+
+}
+
+.picture-container {
+    position: relative;
+    text-align: center;
+    
+}
+.image {
+    border-radius: 6px;;
+}
+.text-hover {
+    font-family: 'The Nautigal';
+    font-size: 36px;
+    color:#fff;
+    opacity: 0;
+    text-align: center;
+    word-wrap: break-word;
+    text-shadow: 1px 1px grey;
+    margin-top: 50%;
+    content-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    transition: opacity .8s, visibility .8s;
+     
+  
+    
+}
+
+.text-hover:hover {
+    content-visibility: visible;
+    opacity: 0.33;
+   
+    
+}
+.image:hover {
+    cursor: pointer;
+}
+
+
+/*main slider*/

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "GGC V2",
+			"path": "."
+		},
+		{
+			"name": "Carrousel",
+			"path": "..\\GGC\\images\\Carrousel"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "GGC V2"
+	}
+}
