@@ -1,0 +1,123 @@
+.quote-title { text-align: center;}
+.section-title { 
+    margin:0;
+    margin-bottom: 10px;;
+}
+.form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
+    width: 1200px;
+    border-top: 4px solid var(--color-body-darker);
+    margin-top: 2rem;
+    padding: 10apx;
+}
+.contact-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: inset;
+    transition: 2s;
+    border-radius: 5px;
+    background-color: rgba(1,1,1,.05);
+
+}
+.contact-box-active {
+    background-color: rgba(0,255,255,.1);
+    box-shadow: 10px 5px 5px rgba(1,1,1,.1);
+    transition: 2s;
+}
+.options-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: inset;
+    transition: 2s;
+    border-radius: 5px;
+    background-color: rgba(1,1,1,.05);
+}
+.options-box-active {
+    background-color: rgba(0,255,255,.1);
+    box-shadow: 10px 5px 5px rgba(1,1,1,.1);
+    transition: 2s;
+}
+
+.quote-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: inset;
+    transition: 2s;
+    border-radius: 5px;
+    background-color: rgba(1,1,1,.05);
+}
+.successFlag {
+    display:flex;
+    justify-self: center;
+    width: 400px;
+    background-color: green;
+    padding: 5px;
+    margin: 10px;
+    display: none;
+}
+.successFlag h3 {
+    color: yellow;
+    font-size: 16pt;
+    font-weight:600;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    
+    justify-self: center;
+}
+
+.popUpFlag {
+    display: block;
+}
+
+#phone1, #phone2 {
+    width: 45px;
+}
+#phone3 {
+    width: 55px;
+}
+
+#f_name, #l_name {
+    margin-bottom: 10px;
+}
+
+/******** Grid *************/
+
+.invisible {
+    visibility: hidden;
+}
+.quote_grid_container {
+    display: grid;
+    column-gap: 20px;
+    grid-template-areas: "a b c";
+    grid-template-columns: 1fr 1fr 1fr;
+    
+
+}
+
+#quoteG1 {
+    grid-area: a;
+}
+#quoteG2 {
+    grid-area: b;
+}
+#quoteG3 {
+    grid-area: c;
+}
+
+output {
+    margin: 0;
+    padding: 0;
+}
+.inlineText {
+    display: inline;
+}
+.noDisplay {
+    display: none;
+}

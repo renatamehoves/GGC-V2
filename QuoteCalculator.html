@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gato Gordo Creations</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"/>   
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="stylesheet" href="/css/QuoteCalculator.css"/>
+  </head>
+  <body>
+   <!--NAVIGATION BAR-->
+    <header>
+      <nav class="nav collapsible">
+        <a class="nav__brand" href="home.html"><img src="/images/logotiny.png" alt="" /></a>
+               <ul class="list nav__list collapsible__content">
+                  <li class="nav__item"><a href="Gallery.html">Gallery</a></li>
+                  <li class="nav__item"><a href="feature staff.html">Featured Staff</a></li>
+                  <li class="nav__item"><a href="Packages.html">Packages</a></li>
+                  <li class="nav__item"><a href="Book Now.html">Contact Us</a></li>
+                  <li  class="nav__item"><a href="#">Login</a></li>
+                
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <h2 class="quote-title">Quote Calculator</h2>
+        <div class="form-box">
+            <FORM ACTION="" id="quoteForm" class="quoteForm">
+                <div class="contact-box" id="contact-box">
+                    <h3 class="section-title">Contact Details:</h3>
+
+                    <label for="f_name">First Name: </label>
+                    <INPUT id="f_name" TYPE="text" NAME="f_name" onkeyup="populateDetails(this.id)"/>
+    
+                    <label for="l_name">Last Name: </label>
+                    <input id="l_name" type="text" name="l_name" onkeyup="populateDetails(this.id)"/>
+                    
+                    <br>
+
+                    <label for="phone1">Phone Number:</label>
+                    <input id="phone1"type="text" maxlength="3" name="phone1" onkeyup=" populateDetails(this.id)"/>
+                    <input id="phone2"type="text" maxlength="3" name="phone2" onkeyup=" populateDetails(this.id)"/>
+                    <input id="phone3"type="text" maxlength="4" name="phone3" onkeyup=" populateDetails(this.id)"/>
+    
+                    <label for="email">Email: </label>
+                    <input id="email" type="text" name="email" onkeyup="populateDetails(this.id)"/>
+    
+                </div>
+
+                <div class="options-box" id="options-box">
+                    <h3 class="section-title">Event Details:</h3>
+
+                    <label for="venue_name">Venue Name: </label>
+                    <input id="venue_name" type="text" name="venue_name" onkeyup=" populateDetails(this.id)"/>
+
+                    <label for="venue_city">City: </label>
+                    <input id="venue_city" type="text" name="venue_city" onkeyup=" populateDetails(this.id)"/>
+
+                    <label for="venue_state">State: </label>
+                    <input id="venue_state" type="text" name="venue_state" onkeyup=" populateDetails(this.id)"/>
+
+                    <br>
+
+                    
+                    <label for="num_of_guests">How many guests are attending? </label>
+                    <input id="num_of_guests" type="range" min="1" max="1000" name="num_of_guests" oninput="guestSliderFunction(), setGuestNum(), populateItems(this.id)"/>
+                    <output id="guestOutput"></output>
+
+                    <br>
+
+                    <label for="num_of_photographers">How many Photographers? </label>
+                    <input id="num_of_photographers" type="range" min="0" max="5" name="num_of_photographers" oninput="photographerSliderFunction(), setPhotoNum(), populateItems(this.id)"/>
+                    <output id="photographerOutput"></output>
+
+                    <br>
+
+                    <label for="num_of_videographers">How many Videographers? </label>
+                    <input id="num_of_videographers" type="range" min="0" max="5" name="num_of_videographers" oninput="videographerSliderFunction(), setVideoNum(), populateItems(this.id)"/>
+                    <output id="videographerOutput"></output>
+
+                    
+                    
+
+                </div>
+
+                <div class="quote-box" id="quote-box">
+                    <h3 class="section-title">Quote Details: </h3>
+                    <div class="quote_grid_container">
+                        <div id="quoteG1">
+                            
+                            <output id="outFName"></output>
+                            <output id="outLName"></output>
+                            <br>
+                            <output id="outPhone1"></output><span class="invisible" id="dash1">-</span><output id="outPhone2"></output><span class="invisible" id="dash2">-</span><output id="outPhone3"></output>
+                            <br>
+                            <output id="outEmail"></output>
+                            <br>
+                            <output id="outVenue"></output>
+                            <br>
+                            <output id="outCity"></output><span class="invisible" id="comma1">, </span>
+                            <output id="outState"></output>
+                        </div>
+                        <div id="quoteG2">
+                            <p class="inlineText noDisplay" id="quoteGuests">Guests in attendance: </p><output id="guestInvoiceOutput"></output>
+                            <br>
+                            <p class="inlineText noDisplay" id="quotePhotographers">Number of Photographers: </p><output id="photoInvoiceOutput"></output>
+                            <br>
+                            <p class="inlineText noDisplay" id="quoteVideographers">Number of Videographers: </p><output id="videoInvoiceOutput"></output>
+                            
+                        </div>
+                        <div id="quoteG3">
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <BUTTON TYPE="submit" id="btnSubmit">Submit</BUTTON>
+                </div>
+            </FORM>
+
+            <br>
+            <div class="successFlag" id="successFlag"><h3>Submission Successful</h3></div>
+        </div>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+    <!--Ready to book-->
+
+ <div class="container">
+    <div class="callout callout--primary callout-signup">
+      <div class="grid grid--1x2">
+        <div class="callout__content">
+          <h2 class="callout__heading">Ready to Book?</h2>
+          <p>
+          Send us an email, and help us make your special day last forever.
+          </p>
+        </div>
+        <a href="#" class="btn btn--secondary btn--stretched">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+    <!--FOOTER-->
+
+  <footer class="block block--dark footer">
+    <div class="container grid footer__sections">
+      <section class="collapsible collapsible--expanded footer__section">
+          <header class="collapsible__header">
+             <h2 class="collapsible__heading footer__heading">SALES</h2>  
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">PRICING</a></li>
+              <li><a href="#">BUILD YOUR PACKAGE</a></li>
+              <li><a href="#">PRINTS</a></li>
+            </ul>
+          </div>
+      </section>
+      <section class="collapsible collapsible--expanded footer__section">
+        <header class="collapsible__header">
+          <h2 class="collapsible__heading footer__heading">BACK OF HOUSE</h2>
+      
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li><a href="#">GEAR WE USE</a></li>
+            <li><a href="feature staff.html">STAFF</a></li>
+            <li><a href="#">SERVER</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="collapsible collapsible--expanded footer__section">
+        <header class="collapsible__header">
+          <h2 class="collapsible__heading footer__heading">GALLERY</h2>
+      
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li><a href="Poses.html">POSES</a></li>
+            <li><a href="#">WEDDING IDEAS</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="collapsible collapsible--expanded footer__section">
+        <header class="collapsible__header">
+          <h2 class="collapsible__heading footer__heading">Company</h2>
+    
+      </header>
+
+        <div class="collapsible__content">
+          <ul class="list">
+            <li><a href="Book Now.html">BOOK NOW</a></li>
+            <li><a href="book a meeting.html">SCHEDULE A MEETING</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="footer__brand">
+        <img src="/images/logotiny.png" alt="" />
+        <p class="footer__brand">Copyright 2022 GGC</p>
+       </section>
+     </div>
+    </footer>
+    <script src="js/QuoteCalculator.js"></script>
+    </body>
+    
+</html>

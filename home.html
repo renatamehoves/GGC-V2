@@ -25,7 +25,7 @@
                <ul class="list nav__list collapsible__content">
                   <li class="nav__item"><a href="Gallery.html">Gallery</a></li>
                   <li class="nav__item"><a href="feature staff.html">Featured Staff</a></li>
-                  <li class="nav__item"><a href="Packages.html">Packages</a></li>
+                  <li class="nav__item"><a href="QuoteCalculator.html">Packages</a></li>
                   <li class="nav__item"><a href="Book Now.html">Contact Us</a></li>
                   <li  class="nav__item"><a href="#">Login</a></li>
                 
@@ -86,19 +86,7 @@
 
 <!--PRICES CARDS-->
 
-      <picture>
-        <source
-          type="image/webp"
-          srcset="images/banner.webp 1x, images/banner@2x.webp 2x"
-        />
-        <source
-          type="image/png"
-          srcset="images/banner.png 1x, images/banner@2x.png 2x"
-        />
-        <img class="hero__image" src="images/banner.png" alt="" />
-      </picture>
-    </div>
-  </section>
+  
  
   <section class="block container block-plans">
     <div class="grid grid--1x3">
@@ -169,26 +157,92 @@
 
 <!--------------------------------END CARDS------------------------------------>
 
-    <section class="timeline">
-        <div class="picture-container">
-            <img class="image" src="images/1 (1).webp">
-            <p data-aos="fade-up" class="text-hover">We will be with you from the very beginning, 
-                sending one of our photographers for a once 
-                in a life time experience Whether you plan 
-                to use these photos for invitations, albums, 
-                or just a personal keep sake, we make sure 
-                this moment in time will never be forgotten.
-            </p>
-        </div>
-    </section>
-    
+
+<!-------------------------------- TIMELINE------------------------------------>
+<section class="timeline">
+  <h2 class="timeline-title" data-aos="fade-down-right">Engagement</h2>
+  <div class="timeline-container">
+    <img class="timeline_image" src="/images/engagement.jpg" alt="happy couple kissing"/>
+    <div class="timeline_image_overlay">
+       <p class="timeline_image_description" data-aos="zoom-out-up">
+         We will be with you from the very beginning,
+         sending one of our photographers for a once in a life time experience Whether 
+         you plan to use these photos for invitations, albums, or just a personal keep 
+         sake, we make sure this moment in time will never be forgotten.</p>
+  </div>
+</section>
+
+<section class="timeline">
+  <h2 class="timeline-title" data-aos="fade-down-right">Getting Ready</h2>
+  <div class="timeline-container">
+    <img class="timeline_image" src="images\getting-readyt.jpg" alt="Bride getting ready"/>
+    <div class="timeline_image_overlay">
+       <p class="timeline_image_description" data-aos="zoom-out-down">
+        The day goes by in a flash. We will be there with you and your partner, capturing every moment.</p>
+  </div>
+</section>
+
+
+<section class="timeline">
+  <h2 class="timeline-title" data-aos="fade-down-left">Ceremony</h2>
+  <div class="timeline-container">
+    <img class="timeline_image" src="images\ceremony.jpg" alt="Wedding Ceremony"/>
+    <div class="timeline_image_overlay">
+       <p class="timeline_image_description" data-aos="zoom-out-up">
+         Wherever it is we'll be with you Whether it be on a beach,
+         cathedral, temple, or rustic ranch, we will bring out the 
+         natural beauty of your chosen venue and capture the moment you two joining your lives together.</p>
+  </div>
+</section>
+
+
+
+<section class="timeline">
+  <h2 class="timeline-title" data-aos="fade-down-right">Portraits</h2>
+  <div class="timeline-container">
+    <img class="timeline_image"  src="images\portraits_couple.jpg" alt="Wedding Portraits"/>
+    <div class="timeline_image_overlay">
+       <p class="timeline_image_description" data-aos="zoom-out-down">
+        After the ceremony, let us whisk you away for a private photo session. 
+        Ok so You are finally married, so now what?</p>
+  </div>
+</section>
+
+
+<section class="timeline">
+  <h2 class="timeline-title" data-aos="fade-down-left">Reception</h2>
+  <div class="timeline-container">
+    <img class="timeline_image"  src="images\reception.jpg" alt="Bride & Groom laughimg at the toast"/>
+    <div class="timeline_image_overlay">
+       <p class="timeline_image_description" data-aos="zoom-out-up">
+        Take a deep breath and Let us join your celebration and capture all those
+         candid moments. First Dances, cake cutting, Bouquet and all the fun surrounding you two.</p>
+  </div>
+</section>
+
+
+<section class="timeline">
+  <h2 class="timeline-title" data-aos="fade-down-left">Send Off</h2>
+  <div class="timeline-container">
+    <img class="timeline_image"  src="images\sendoffjpg.jpg" alt="Bride & Groom celebrating the exit of their wedding"/>
+    <div class="timeline_image_overlay">
+       <p class="timeline_image_description" data-aos="zoom-out-down">
+        As one moment ends... a life together begins.</p>
+  </div>
+</section>
+
+
+
+
+<!--------------------------------END TIMELINE------------------------------------>
+
 <!------------------------------------ TESTIMONIALS------------------------------------------------->
 
   <section class="block"> 
     <header class="block__header"data-aos="fade-down-left">
       <h2>What Our Customer Are Saying</h2>
     </header>
-<div class="container">
+     <div class="container">
           <div class="media"data-aos="fade-right">
             <div class="media__image">
             <img src="images/grayson round.png" alt="">
@@ -339,6 +393,7 @@
   <script src="js/main.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>AOS.init();</script>
+  <script>src="js/timeline.js"</script>
  <!--SCRIPTS-->
 
 </body>

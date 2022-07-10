@@ -1113,4 +1113,63 @@ a {
   width: 100%;
   z-index: 1;
 }
-  
+
+
+/*FEATURE STAFF*/
+
+.avatar_round{
+  position: relative;
+  justify-content: center;
+  width: 500px;
+  height:500px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: top center;
+  padding:2rem;
+ }
+ 
+ @media screen and (max-width: 500px) {
+  .avatar_round{
+  max-width: 350px;
+  border-radius: 50%; 
+  box-sizing: border-box;
+  padding: 1.05rem;}
+   }
+
+   .staff_grid {
+    position: relative;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    height:auto;
+   }
+    
+    .staff-title {
+      text-align: center;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+    }
+  .staff-container {
+    justify-content: space-evenly;
+    justify-items: center;}
+   
+
+    .staff-p{
+      word-wrap: break-word;
+      text-align: center; 
+      justify-content: space-evenly;
+      justify-items: center;
+      padding: 2rem;}
+
+
+    @media screen and (max-width: 700px) {
+      .staff_grid{
+        display:block;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-evenly;
+        justify-items: center;
+        padding: 2rem;}
+        }
+      
+
+    
+ 
