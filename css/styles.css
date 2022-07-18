@@ -969,149 +969,62 @@ a {
 
 }
 
-/* HOME BANNER */
-
-
-.carousel_slider {
+/* HOME BANNER *//* Slideshow container */
+.slideshow-container {
   position: relative;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  background-size:contain;
-  background-repeat:no-repeat;
-  justify-content: center;
+  margin: auto;
+  
 }
 
-.slider_properties {
-  width:100%;
-  height: 65%;
-  right:-1920px;
-  position:absolute;
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position:center center;
-  animation:  myloop 60s infinite;
-  justify-content: center;
-  }
-
-
-  .slide0 {animation-delay:-3s;}
-  .slide1 {animation-delay: 05s;}
-  .slide2 {animation-delay: 10s;}
-  .slide3 {animation-delay: 15s;}
-  .slide4 {animation-delay: 20s;}
-  .slide5 {animation-delay: 25s;}
-  .slide6 {animation-delay: 30s;}
-  .slide7 {animation-delay: 35S;}
-  .slide8 {animation-delay: 40S;}
-  .slide9 {animation-delay: 45s;}
-
-
-
-
-
-  
-.carousel {
-  margin: 0 auto;
-  overflow: hidden;
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
   text-align: center;
 }
 
-.slides {
-  width: 100%;
-  background-color: var(--color-secondary);
-  display: flex;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-.slides::-webkit-scrollbar {
-  display: none;
-}
-
-.slides-item {
-  align-items: center;
-  border-radius: 10px;
-  display: flex;
-  flex-shrink: 0;
-  font-size: 100px;
-  height: 600px;
-  justify-content: center;
-  margin: 0 1rem;
-  position: relative;
-  scroll-snap-align: start;
-  transform: scale(1);
-  transform-origin: center center;
-  transition: transform .5s;
-  width: 100%;
-}
-
-.carousel__nav {
-  padding: 1.25rem .5rem;
-}
-
-.slider-nav {
-  align-items: center;
-  background-color: #ddd;
-  border-radius: 50%;
-  color: #000;
-  display: inline-flex;
-  height: 1.5rem;
-  justify-content: center;
-  padding: .5rem;
-  position: relative;
-  text-decoration: none;
-  width: 1.5rem;
-}
-
-.slider-nav:hover,
-.slider-nav:active {
-  background-color: #000;
-  color: #fff;
-}
-
-.slide-1 {
-  background-color: #fdc;
-}
-
-.slide-2 {
-  background-color: #bfd;
-}
-
-.slide-3 {
-  background-color: #cdf;
-}
-
-.slide-4 {
-  background-color: #dca;
-}
-
-.slide-5 {
-  background-color: #ffc;
-}
-
-.carousel__skip-link {
-  height: 1px;
-  overflow: hidden;
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
   position: absolute;
-  top: auto;
-  width: 1px;
+  top: 0;
 }
 
-.carousel__skip-link:focus {
-  align-items: center;
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  font-size: 30px;
-  height: 680px;
-  justify-content: center;
-  opacity: .8;
-  text-decoration: none;
-  width: 100%;
-  z-index: 1;
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
 
 
