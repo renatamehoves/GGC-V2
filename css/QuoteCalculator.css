@@ -118,6 +118,22 @@ output {
 .inlineText {
     display: inline;
 }
+
+
 .noDisplay {
     display: none;
+}
+
+.estimateGrid {
+    display: grid;
+    column-gap: 10px; 
+    grid-template-columns: 150px 150px;
+}
+.estimateGrid p {
+    margin: 0;
+    
+}
+
+#grandTotalBorder {
+    border-top: 4px solid darkgray;
 }

@@ -73,10 +73,45 @@ a {
   grid-template-areas:
             "header . . ."
             "a b c d"
-            "e f g h"
-            "e i j k"
-            "l . . .";
-}
+            "e b c f"
+            "g h i j"
+            "l h m n"
+            "o p q r"
+            "s p t u"
+            "v w x y"
+            "z w aa bb"
+            "cc dd ee ff"
+            "cc dd gg ff"
+            "hh ii jj kk"
+            "ll mm jj kk"
+            "nn mm rr pp "
+            "tt qq oo ss"
+            "yy vv ww xx"
+            "fff ddd zz bbb"
+            "ccc eee aaa uu"
+            "ggg hhh iii jjj"
+            "kkk lll iii jjj"
+            "nnn ooo ppp qqq"
+            "mmm rrr sss ttt"
+            "uuu vvv www ttt"
+            "uuu yyy www xxx"
+            "zzz b4 a4 c4"
+            "zzz b4 d4 e4"
+            "f4 g4 h4 i4"
+            "j4 k4 l4 m4"
+            "n4 o4 l4 p4"
+            "q4 o4 r4 s4"
+            "t4 u4 v4 w4"
+            "x4 y4 v4 w4"
+            "z4 y4 a5 b5"
+            "c5 d5 e5 f5"
+            "g5 h5 e5 i5"
+            "j5 k5 .. .."
+           
+
+
+            
+;}
 
 @media screen and (max-width: 650px) { 
     .gallery {
@@ -97,6 +132,109 @@ a {
 #j {grid-area: j;}
 #k {grid-area: k;}
 #l {grid-area: l;}
+#m {grid-area: m;}
+#n {grid-area: n;}
+#o {grid-area: o;}
+#p {grid-area: p;}
+#q {grid-area: q;}
+#r {grid-area: r;}
+#s {grid-area: s;}
+#t {grid-area: t;}
+#u {grid-area: u;}
+#v {grid-area: v;}
+#w {grid-area: w;}
+#x {grid-area: x;}
+#y {grid-area: y;}
+#z {grid-area: z;}
+#aa {grid-area: aa;}
+#bb {grid-area: bb;}
+#cc {grid-area: cc}
+#dd {grid-area: dd;}
+#ee {grid-area: ee;}
+#ff {grid-area: ff;}
+#gg {grid-area: gg;}
+#hh {grid-area: hh;}
+#ii {grid-area: ii;}
+#jj {grid-area: jj;}
+#kk {grid-area: kk;}
+#ll {grid-area: ll;}
+#mm {grid-area: mm;}
+#nn {grid-area: nn;}
+#oo {grid-area: oo;}
+#pp {grid-area: pp;}
+#qq {grid-area: qq;}
+#rr {grid-area: rr;}
+#ss {grid-area: ss;}
+#tt {grid-area: tt;}
+#uu {grid-area: uu;}
+#vv {grid-area: vv;}
+#ww {grid-area: ww;}
+#xx {grid-area: xx;}
+#yy {grid-area: yy;}
+#zz {grid-area: zz;}
+#aaa {grid-area: aaa;}
+#bbb {grid-area: bbb;}
+#ccc {grid-area: ccc}
+#ddd {grid-area: ddd;}
+#eee {grid-area: eee;}
+#fff {grid-area: fff;}
+#ggg {grid-area: ggg;}
+#hhh {grid-area: hhh;}
+#iii {grid-area: iii;}
+#jjj {grid-area: jjj;}
+#kkk {grid-area: kkk;}
+#lll {grid-area: lll;}
+#mmm {grid-area: mmm;}
+#nnn {grid-area: nnn;}
+#ooo {grid-area: ooo;}
+#ppp {grid-area: ppp;}
+#qqq {grid-area: qqq;}
+#rrr {grid-area: rrr;}
+#sss {grid-area: sss;}
+#ttt {grid-area: ttt;}
+#uuu {grid-area: uuu;}
+#vvv {grid-area: vvv;}
+#www {grid-area: www;}
+#xxx {grid-area: xxx;}
+#yyy {grid-area: yyy;}
+#zzz {grid-area: zzz;}
+#a4 {grid-area: a4;}
+#b4 {grid-area: b4;}
+#c4 {grid-area: c4;}
+#d4 {grid-area: d4;}
+#e4 {grid-area: e4;}
+#f4 {grid-area: f4;}
+#g4 {grid-area: g4;}
+#h4 {grid-area: h4;}
+#i4 {grid-area: i4;}
+#j4 {grid-area: j4;}
+#k4 {grid-area: k4;}
+#l4 {grid-area: l4;}
+#m4 {grid-area: m4;}
+#n4 {grid-area: n4;}
+#o4 {grid-area: o4;}
+#p4 {grid-area: p4;}
+#q4 {grid-area: q4;}
+#r4 {grid-area: r4;}
+#s4 {grid-area: s4;}
+#t4 {grid-area: t4;}
+#u4 {grid-area: u4;}
+#v4 {grid-area: v4;}
+#w4 {grid-area: w4;}
+#x4 {grid-area: x4;}
+#y4 {grid-area: y4;}
+#z4 {grid-area: z4;}
+#a5 {grid-area: a5;}
+#b5 {grid-area: b5;}
+#c5 {grid-area: c5;}
+#d5 {grid-area: d5;}
+#e5 {grid-area: e5;}
+#f5 {grid-area: f5;}
+#g5 {grid-area: g5;}
+#h5 {grid-area: h5;}
+#i5 {grid-area: i5;}
+#j5 {grid-area: j5;}
+#k5 {grid-area: k5;}
 
 
 .gallery h2 {

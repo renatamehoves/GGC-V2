@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <script 
+      src="js/QuoteCalculatorModule.js" type="module">
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gato Gordo Creations</title>
@@ -30,7 +34,7 @@
     <main>
         <h2 class="quote-title">Quote Calculator</h2>
         <div class="form-box">
-            <FORM ACTION="" id="quoteForm" class="quoteForm">
+            <FORM ACTION="" id="quoteForm" class="quoteForm" onkeydown="return event.key != 'Enter';">
                 <div class="contact-box" id="contact-box">
                     <h3 class="section-title">Contact Details:</h3>
 
@@ -68,19 +72,19 @@
 
                     
                     <label for="num_of_guests">How many guests are attending? </label>
-                    <input id="num_of_guests" type="range" min="1" max="1000" name="num_of_guests" oninput="guestSliderFunction(), setGuestNum(), populateItems(this.id)"/>
+                    <input id="num_of_guests" type="range" min="1" max="1000" name="num_of_guests" value="0" oninput="guestSliderFunction(), setGuestNum(), populateItems(this.id)"/>
                     <output id="guestOutput"></output>
 
                     <br>
 
                     <label for="num_of_photographers">How many Photographers? </label>
-                    <input id="num_of_photographers" type="range" min="0" max="5" name="num_of_photographers" oninput="photographerSliderFunction(), setPhotoNum(), populateItems(this.id)"/>
+                    <input id="num_of_photographers" type="range" min="0" max="5" name="num_of_photographers" value="0" oninput="photographerSliderFunction(), setPhotoNum(), populateItems(this.id), generateQuote()"/>
                     <output id="photographerOutput"></output>
 
                     <br>
 
                     <label for="num_of_videographers">How many Videographers? </label>
-                    <input id="num_of_videographers" type="range" min="0" max="5" name="num_of_videographers" oninput="videographerSliderFunction(), setVideoNum(), populateItems(this.id)"/>
+                    <input id="num_of_videographers" type="range" min="0" max="5" name="num_of_videographers" value="0" oninput="videographerSliderFunction(), setVideoNum(), populateItems(this.id), generateQuote()"/>
                     <output id="videographerOutput"></output>
 
                     
@@ -114,6 +118,34 @@
                             
                         </div>
                         <div id="quoteG3">
+                          <div class="estimateGrid">
+                            <div>
+                              <p>subtotal: </p>
+                            </div>
+                            <div>
+                              <p class="inlineText">$</p><output id="subtotal"></output>
+                            </div>
+                            
+                          </div>
+                          <div class="estimateGrid">
+                            <div>
+                              <p>tax(8.25%): </p>
+                            </div>
+                            <div>
+                              <p class="inlineText">$</p><output id="tax"></output>
+                            </div>
+                             
+                          </div>
+                          <div id="grandTotalBorder" class="estimateGrid">
+                            <div>
+                              <p>Grand Total: </p>
+                            </div>
+                            <div>
+                              <p class="inlineText">$</p><output id="grandTotal"></output>
+                            </div>
+                            
+                          </div>
+                          
                             
                         </div>
 
@@ -128,22 +160,9 @@
             <div class="successFlag" id="successFlag"><h3>Submission Successful</h3></div>
         </div>
 
-        
-        
-
-
-
-
-
-
-
-
 
 
     </main>
-
-
-
 
     <!--Ready to book-->
 
@@ -224,7 +243,7 @@
        </section>
      </div>
     </footer>
-    <script src="js/QuoteCalculator.js"></script>
+    
     </body>
     
 </html>

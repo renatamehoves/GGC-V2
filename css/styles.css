@@ -1115,11 +1115,12 @@ a {
 }
 
 
-/*FEATURE STAFF*/
+/******************************************************FEATURE STAFF**********************************************/
 
 .avatar_round{
   position: relative;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   width: 500px;
   height:500px;
   border-radius: 50%;
@@ -1128,19 +1129,14 @@ a {
   padding:2rem;
  }
  
- @media screen and (max-width: 500px) {
-  .avatar_round{
-  max-width: 350px;
-  border-radius: 50%; 
-  box-sizing: border-box;
-  padding: 1.05rem;}
-   }
-
    .staff_grid {
     position: relative;
     display: grid;
     grid-template-columns:1fr 1fr;
     height:auto;
+    justify-content: center;
+
+  
    }
     
     .staff-title {
@@ -1148,17 +1144,18 @@ a {
       box-sizing: border-box;
       margin-bottom: 1rem;
     }
+
+
   .staff-container {
-    justify-content: space-evenly;
+    justify-content:center;
     justify-items: center;}
    
 
     .staff-p{
       word-wrap: break-word;
       text-align: center; 
-      justify-content: space-evenly;
-      justify-items: center;
-      padding: 2rem;}
+      padding: 4rem;
+           }
 
 
     @media screen and (max-width: 700px) {
@@ -1167,9 +1164,35 @@ a {
         grid-template-columns: repeat(1, 1fr);
         justify-content: space-evenly;
         justify-items: center;
-        padding: 2rem;}
+        padding: 2rem;
         }
-      
+        }
+        @media screen and (max-width: 500px) {
+          .avatar_round{
+          max-width: 350px;
+          border-radius: 50%; 
+          box-sizing: border-box;
+          padding: 1.05rem;}
+           }
 
-    
+
+     /******************************************************FEATURE STAFF ENDS **********************************************/ 
+
+     /******************************************************WEDDING POSES GUIDE**********************************************/
+     
+     
+.poses_text{
+  word-wrap: break-word;
+  text-align: center; 
+  padding: 4rem;
+}
+.poses_container {
+  justify-content:center;
+  justify-items: center;
+  padding: 4rem;
+ 
+}
+ 
+
+
  
