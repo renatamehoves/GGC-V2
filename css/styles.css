@@ -722,37 +722,11 @@ a {
   transform: translateY(5px);
   width: 275px;
 }
-@media screen and (max-width: 767px)
-  {.nav .collapsible__content {
-    opacity: 1;
-    max-height: 100%;
-    display: none;}}
-
-
-
-.nav__list {
-  width: auto;
-  text-align: justify;
-  display: flex;
-  font-size: 1.6rem;
-  opacity: 1;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 1rem;
-  align-items: center;
-  width: 100%;
-  
-}
-
-.nav__item {
-  border: 0;
-}
 
 @media screen and (min-width: 768px) {
   .nav__toggler {
     display: none;
   }
-
 
   .nav__list {
     width: auto;
@@ -760,14 +734,13 @@ a {
     font-size: 1.6rem;
     max-height: 100%;
     opacity: 1;
-    text-align: justify;
   }
 
   .nav__item {
     border: 0;
   }
 }
-
+*/
 /* Hero */
 
 .hero__tagline {
@@ -1082,10 +1055,10 @@ a {
         }
         @media screen and (max-width: 500px) {
           .avatar_round{
-          max-width: 350px;
+          display: flex;
           border-radius: 50%; 
           box-sizing: border-box;
-          padding: 1.05rem;}
+          padding:5rem;}
            }
 
 
@@ -1105,7 +1078,78 @@ a {
   padding: 4rem;
  
 }
+
+.poses_img{
+  width:60%;
+  height: auto;
+  justify-content: center;
+}
  
 
 
  
+/*********************************************************CHAPEL DULCINEA****************************************************/
+
+.chapel_header{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:5rem;
+  font-weight: 600;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+
+.chapel_plan_name{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-headings);
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+  color: inherit;
+
+}
+
+.chapel_plan_description{
+  font-size: 1rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  display: block;
+  text-transform: uppercase;
+  text-align:left;
+}
+
+.chapel_plan_price{
+  font-size: 10rem;
+  text-align: left;
+}
+
+
+
+.chapel_description{
+  text-align: center;
+  justify-content: center;
+  margin: 5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+  word-wrap: break-word;
+  }
+
+@media screen and (min-width: 1024px) {
+
+  .chapel_plan__name {
+    font-size: 1.4rem;
+  }
+
+  .chapel_plan__price {
+    font-size: 5rem;
+  }
+
+  .chapel_plan__description {
+    font-size: 1.7rem;
+  }
+}
+
+/****************************************************************FAQ****************************************/

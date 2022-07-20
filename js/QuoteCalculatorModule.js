@@ -1,5 +1,5 @@
  import {APIConnect} from './Class/DBAPI/APIConnect.js';
-import { FetchService } from './Class/DBAPI/FetchService.js';
+
  
  
  /***********************Price Values ***************************/
@@ -18,7 +18,7 @@ const pricingURL = "http://www.shootingstarerp.com:8090/pricing";
 const pricingAPI = new APIConnect(pricingURL);
 var pricingJSON = pricingAPI.getData();
 console.log(pricingJSON);
-console.log(pricingJSON);
+
 
 /***********************Backend Quote Calc API Code *************************/
   const apiURL = "http://www.shootingstarerp.com:8090/quote_calculator";
