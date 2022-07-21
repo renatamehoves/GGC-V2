@@ -186,7 +186,7 @@ window.generateQuote = () => {
         subtotal = 0;
     } else subtotal = Number(personnelCosts * (1+profit)).toFixed(2);
     var taxAmount = Number(subtotal * tax).toFixed(2);
-    var grandTotal = Number(subtotal) + Number(taxAmount);
+    var grandTotal = (Number(subtotal) + Number(taxAmount)).toFixed(2);
 
     //display to screen
     document.getElementById('subtotal').innerHTML = subtotal;
