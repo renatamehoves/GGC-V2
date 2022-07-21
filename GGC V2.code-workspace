@@ -3,10 +3,6 @@
 		{
 			"name": "GGC V2",
 			"path": "."
-		},
-		{
-			"name": "Carrousel",
-			"path": "..\\GGC\\images\\Carrousel"
 		}
 	],
 	"settings": {
