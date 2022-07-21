@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home1/mehovesc/public_html/gatogordocreations/
-    - export DEPLOYFROM=/home1/mehovesc/repositories/ggcwebsite
+    - export DEPLOYFROM=/home1/mehovesc/repositories/GGC-V2
     - /bin/cp -R $DEPLOYFROM $DEPLOYPATH
