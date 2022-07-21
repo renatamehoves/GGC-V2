@@ -4,20 +4,43 @@
  
  /***********************Price Values ***************************/
 
-var photographer = 800;
-var secondP = photographer/2;
-var videographer = 1600;
-var editing = 200;
-var profit = 1.3;
-var tax = .0825;
-
-
+var photographer;
+var secondP;
+var videographer;
+var secondV;
+var editing;
+var profit;
+var tax;
+var photobooth;
+/*
+      var company_p;
+      var creatededitor;
+      var first_shooter;
+      var first_videographer;
+      var id;
+      var photobooth;
+      var second_shooter;
+      var second_videographer;
+      var tax_rate;
+      */
 
 /**********Populate Pricing Values*************************/
 const pricingURL = "http://www.shootingstarerp.com:8090/pricing";
-const pricingAPI = new APIConnect(pricingURL);
-var pricingJSON = pricingAPI.getData();
-console.log(pricingJSON);
+
+await fetch(pricingURL)
+  .then(response => response.json())
+  .then(data => {
+    profit = data.company_p;
+    editing = data.editor;
+    photographer = data.first_shooter;
+    videographer = data.first_videographer;
+    photobooth = data.photobooth;
+    secondP = data.second_shooter;
+    secondV = data.second_videographer;
+    tax = data.tax_rate;
+  });
+
+
 
 
 /***********************Backend Quote Calc API Code *************************/
@@ -148,17 +171,20 @@ window.generateQuote = () => {
     if (photoNum <= 1) {
         totalPhotoCost = photoNum * photographer;
     } else {
-        totalPhotoCost = photographer;
-        totalPhotoCost += (photoNum-1)*secondP;
+        totalPhotoCost = photographer + (secondP*(photoNum-1));
+        
     }
 
     var totalVideoCost;
     if (videoNum<=1) {
         totalVideoCost = videoNum * videographer;
-    } else totalVideoCost = videographer;
+    } else totalVideoCost = videographer + (secondV*(videoNum-1));
     var totalEditorCost = editing;
     var personnelCosts = totalPhotoCost + totalVideoCost + totalEditorCost
-    var subtotal = Number(personnelCosts * profit).toFixed(2);
+    var subtotal;
+    if (photoNum == 0 && videoNum == 0){
+        subtotal = 0;
+    } else subtotal = Number(personnelCosts * (1+profit)).toFixed(2);
     var taxAmount = Number(subtotal * tax).toFixed(2);
     var grandTotal = Number(subtotal) + Number(taxAmount);
 

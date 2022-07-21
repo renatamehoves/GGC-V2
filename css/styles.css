@@ -1135,6 +1135,7 @@ a {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: medium;
   word-wrap: break-word;
+  font-size: 2rem;
   }
 
 @media screen and (min-width: 1024px) {

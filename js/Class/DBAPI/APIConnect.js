@@ -20,26 +20,16 @@ export class APIConnect {
         const jsonFormData  = this.#buildJsonFormData(form);
         const headers = this.#buildHeaders();
         const response = await this.#fetchService.performPostHttpRequest(
-            this.#URL, headers, jsonFormData).json();
+            this.#URL, headers, jsonFormData);
         if(response) {return response;} else return null;
     } // end public submitForm method
 
     async getData() {
-/*
-      var company_p;
-      var creatededitor;
-      var first_shooter;
-      var first_videographer;
-      var id;
-      var photobooth;
-      var second_shooter;
-      var second_videographer;
-      var tax_rate;
-      */
+
       const headers = this.#buildHeaders();
       const response = await this.#fetchService.performGetHttpRequest(this.#URL, headers);
       
-      if(response) {return response;} else return null;
+      if(response){ return response;} else return null;
     }
 
 
