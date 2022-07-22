@@ -5,7 +5,7 @@ deployment:
     - export DEPLOYFROM=/home1/mehovesc/repositories/gatogordocreations
 
     # Remove previous old files, if any.
-    #- /bin/rm -Rf ${DEPLOYPATH}
+    - /bin/rm -Rf ${DEPLOYPATH}/gatogordocreations
 
     #- /bin/mkdir /home1/mehovesc/public_html/gatogordocreations
     # Copy old site files to another directory.
