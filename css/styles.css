@@ -1071,16 +1071,18 @@ a {
   word-wrap: break-word;
   text-align: center; 
   padding: 4rem;
+  
 }
 .poses_container {
-  justify-content:center;
-  justify-items: center;
-  padding: 4rem;
+  display: block;
+  padding: 2rem;
+  
+  
  
 }
 
 .poses_img{
-  width:60%;
+  width:80%;
   height: auto;
   justify-content: center;
 }
