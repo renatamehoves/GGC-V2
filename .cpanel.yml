@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home1/mehovesc/public_html/gatogordocreations/
+    - export DEPLOYPATH=/home1/mehovesc/public_html/
     - export DEPLOYFROM=/home1/mehovesc/repositories/gatogordocreations
 
     # Remove previous old files, if any.
