@@ -3,4 +3,15 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home1/mehovesc/public_html/gatogordocreations/
     - export DEPLOYFROM=/home1/mehovesc/repositories/GGC-V2
-    - /bin/cp -R $DEPLOYFROM $DEPLOYPATH
+
+    # Remove previous old files, if any.
+    - /bin/rm -Rf ${DEPLOYPATH}_old
+    # Copy old site files to another directory.
+    - /bin/cp -R ${DEPLOYPATH} ${DEPLOYPATH}_old
+    # Sync repository files to the deploy target path, excluding .git folder.
+    # --delete-after will remove deleted files and folders after syncing.
+    - /bin/rsync -aP --exclude '.git' --exclude '.well-known' ${REPOPATH}/ ${DEPLOYPATH} --delete-after
+    # Set correct permissions.
+    - /bin/chmod 755 ${DEPLOYPATH}
+    - /bin/find ${DEPLOYPATH} -type d -exec /bin/chmod 755 '{}' \;
+    - /bin/find ${DEPLOYPATH} -type f -exec /bin/chmod 644 '{}' \;
