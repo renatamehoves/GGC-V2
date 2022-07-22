@@ -14,9 +14,8 @@ deployment:
     # --delete-after will remove deleted files and folders after syncing.
     #- /bin/rsync -aP --exclude '.git' --exclude '.well-known' ${REPOPATH}/ ${DEPLOYPATH} --delete-after
     # Set correct permissions.
+    - /bin/cp -R $DEPLOYFROM $DEPLOYPATH
+
     - /bin/chmod 755 ${DEPLOYPATH}
     - /bin/find ${DEPLOYPATH} -type d -exec /bin/chmod 755 '{}' \;
     - /bin/find ${DEPLOYPATH} -type f -exec /bin/chmod 644 '{}' \;
-
-
-    - /bin/cp -R $DEPLOYFROM $DEPLOYPATH
