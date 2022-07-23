@@ -1029,21 +1029,18 @@ font-size: 2rem;
 
 .avatar_round{
   position: relative;
-  display: grid;
-  place-items: center;
   width: 500px;
   height:500px;
   border-radius: 50%;
-  background-size: cover;
-  background-position: top center;
   padding:2rem;
+  margin-top: 4rem;
  }
  
    .staff_grid {
     position: relative;
     display: grid;
-    grid-template-columns:1fr 1fr;
-    height:auto;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     justify-content: center;
 
   
@@ -1062,6 +1059,7 @@ font-size: 2rem;
    
 
     .staff-p{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
       word-wrap: break-word;
       text-align: center; 
       padding: 4rem;
@@ -1072,18 +1070,17 @@ font-size: 2rem;
       .staff_grid{
         display:block;
         grid-template-columns: repeat(1, 1fr);
-        justify-content: space-evenly;
         justify-items: center;
         padding: 2rem;
         }
+
+        .avatar_round{
+          width: 450px;
+          height:450px;
+       
         }
-        @media screen and (max-width: 500px) {
-          .avatar_round{
-          display: flex;
-          border-radius: 50%; 
-          box-sizing: border-box;
-          padding:5rem;}
-           }
+        }
+       
 
 
      /******************************************************FEATURE STAFF ENDS **********************************************/ 
