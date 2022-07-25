@@ -8,7 +8,7 @@ var profit;
 var tax;
 var photobooth;
 
-const pricingURL = "https://www.shootingstarerp.com:8443/pricing";
+const pricingURL = "https://www.shootingstarerp.com:8543/pricing";
 
 await fetch(pricingURL)
   .then(response => response.json())

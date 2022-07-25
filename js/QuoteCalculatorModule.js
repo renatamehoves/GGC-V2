@@ -25,7 +25,7 @@ var photobooth;
       */
 
 /**********Populate Pricing Values*************************/
-const pricingURL = "https://www.shootingstarerp.com:8443/pricing";
+const pricingURL = "https://www.shootingstarerp.com:8543/pricing";
 
 await fetch(pricingURL)
   .then(response => response.json())
@@ -44,7 +44,7 @@ await fetch(pricingURL)
 
 
 /***********************Backend Quote Calc API Code *************************/
-  const apiURL = "https://www.shootingstarerp.com:8443/quote_calculator";
+  const apiURL = "https://www.shootingstarerp.com:8543/quote_calculator";
   
   const apiConnect = new APIConnect(apiURL);
   const quoteForm = document.querySelector('.quoteForm');
