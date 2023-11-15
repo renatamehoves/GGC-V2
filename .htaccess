@@ -1,26 +1,28 @@
+# Use PHP5 Single php.ini as default
+# AddHandler application/x-httpd-eig-php52 .php
 
-# mod_rewrite starts here
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74___lsphp .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
 
+#mod_rewrite starts here
 RewriteEngine on
 
-# does not apply to existing directories,meaning that if folder exists on the server don't change anything and do't run Rule!
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+# does not apply to existing directories, meaning that if a folder exists on the server, don't change anything and don't run the rule!
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Check for file in directory with .html extension
-
 RewriteCond %{REQUEST_FILENAME}\.html -f
 
 # here we actually show the page that has the .html extension
-
 RewriteRule ^(.*)$ $1.html [NC,L]
 
-
-
-RewriteEngine On
-RewriteCond %{HTTPS} on
-RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
-
-
+# Custom error document
 ErrorDocument 404 /404.html
