@@ -1,0 +1,78 @@
+h4 {
+    font-size: 30px;
+}
+.shuffle_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        ". . . . . . . stack stack" 
+        ". . cpq cpq . . . . ." 
+        ". . . . . . . . ."
+        ". . . message message message . . ."
+        ". . . message message message . . ."
+        ". certified certified . . . . . ."
+        "api api . . . . java java ."
+        ". . . sql sql . . . ." ;
+    gap: 20px;
+    justify-items: center;
+}
+
+#message {
+    grid-area: message; 
+    position: relative;
+    text-align:center;
+
+}
+
+#body{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: blanchedalmond;
+    opacity: 0.4
+    ;
+}
+
+#title i {
+    color: blue;
+    font-size: 26px;
+}
+#message h3{
+    font-size: 56px;
+}
+#java {
+    grid-area:java;
+}
+#cpq {
+    grid-area: cpq;
+}
+#certified {
+    grid-area:certified;
+}
+#stack {
+    grid-area: stack;
+}
+#sql {
+    grid-area: sql;
+}
+#api {
+    grid-area: api;
+}
+
+.bkg_container{
+        display: block;
+        padding: 2rem;
+        width:100%;
+    
+           
+       
+      }
+
+
+.bkg_img{
+    display: flexbox;
+     width:200%;
+
+    }
